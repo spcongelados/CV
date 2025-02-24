@@ -1,0 +1,170 @@
+:root{
+    --color1:#edede9;
+    --color2:#f5ebe0;
+    --color3:#d5bdaf;
+    --colort1: #363242;
+    --colort2: #323036;
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    font-family: var(--primary-font);
+    display: flex;
+    color: var(--colort2);
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 14vw;
+    align-items: center;
+    background-color: var(--color3);
+    height: 25vh ;
+    color: var(--colort1);
+}
+
+.profile{
+    height: 30vh;
+    border-radius: 200px;
+    border: var(--color3) 10px solid;
+}
+
+hgroup{
+    position: relative;
+    top:2vh;
+}
+
+.img-container{
+    position: relative;
+    top: 4vh;
+}
+main .column{
+    padding: 0vh 5vw;
+    align-items: center;
+    flex: 1;
+    padding-top: 5vh ;
+    width: 100%;
+}
+
+main .column:first-of-type{
+    flex-basis: 35vw;
+    background-color: var(--color1);
+}
+
+main .column:last-of-type{
+    flex-basis: 65vw;
+    background-color: var(--color2);
+}
+
+article{
+    padding: 3vh 2vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh ;
+}
+
+ul{
+    padding-left: 2vw;
+}
+
+li{
+    margin-bottom: 2vh;
+    font-size: 1.1rem;
+    color: var(--colort2);
+}
+
+#contact ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+h3{
+    padding-bottom: 2vh;
+}
+
+p{
+    margin-left: 1vw;
+    line-height: 4vh;
+}
+
+.icon {
+    width: 24px;
+    filter: invert(12%) sepia(13%) saturate(2500%) hue-rotate(180deg) brightness(95%) contrast(90%);
+    position: relative;
+    top:0.7vh;
+}
+
+.column:first-child article:first-of-type ul {
+    list-style: none;
+}
+
+.column:first-child article:first-of-type ul li:hover {
+    transform: scale(1.2);
+    border: #363242 2px solid;
+    border-radius: 20px;
+}
+
+.icon-text a {
+    color: var(--colort2);
+    text-decoration: none;
+    transition: font-size 0.5s ease;
+}
+
+.icon-text a:hover {
+    color: var(--colort1);
+    text-decoration: underline;
+}
+
+
+#contact{
+    height: 35vh;
+}
+
+#contact ul li{
+    height: 6vh;
+}
+
+
+h1, h2, h3 {
+    transition: color 0.3s ease;
+}
+
+hgroup, address, ul, li, p {
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+
+    }
+    main {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
